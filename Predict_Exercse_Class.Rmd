@@ -137,7 +137,7 @@ model_gb <- train(classe~. , method="gbm", data=pml.train, trControl=train_contr
 predict_gb <- predict(model_gb, newdata=pml.test)
 confusionMatrix_gb <- confusionMatrix(predict_gb, pml.test$classe)
 confusionMatrix_gb$overall[1] # Accuracy
-plot.matrix(confusionMatrix_dt, "gradient boosting")
+plot.matrix(confusionMatrix_gb, "gradient boosting")
 ```
 
 ### Random forest
